@@ -9,7 +9,7 @@
 # Installation
 *This plugin, if downloaded from this repo, will need its dependencies loaded with composer.*
 
-1. Download the latest release zip file, and install as plugin in Wordpress
+1. Download the latest release zip file, and install plugin in Wordpress
 2. Activate the plugin
 3. Go to the plugin settings page (under Forms > Settings > Coda.io)
 4. Enter your Coda.io API Key
