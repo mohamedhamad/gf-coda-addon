@@ -1,0 +1,25 @@
+{
+    "name": "mohamedhamad/gravityforms-coda",
+    "description": "GravityForms Coda Addon",
+    "keywords": [
+        "gravityforms",
+        "Coda.io"
+    ],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "danielstieber/coda-php": "^0.0.3"
+    },
+    "require-dev": {
+        
+    },
+    "repositories": [
+    ],
+    "autoload": {},
+    "autoload-dev": {},
+    "extra": {},
+    "scripts": {},
+    "config": {},
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

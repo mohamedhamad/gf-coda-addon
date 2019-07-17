@@ -1,0 +1,8 @@
+
+/vendor
+/package-lock.json
+/composer.lock
+/dist
+.DS_Store
+/.DS_Store
+.vscode
