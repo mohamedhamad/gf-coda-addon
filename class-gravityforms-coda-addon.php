@@ -18,7 +18,7 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 	public $api = null;
 	
 	/**
-	 * Defines the capabilities needed for the Mailchimp Add-On
+	 * Defines the capabilities needed for the Coda.io Add-On
 	 *
 	 * @since  3.0
 	 * @access protected
@@ -49,7 +49,7 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 	 *
 	 * @since  3.7
 	 * @access protected
-	 * @var    string $merge_var_name The MailChimp list field tag name; used by gform_mailchimp_field_value.
+	 * @var    string $merge_var_name The Coda.io doc list field tag name;
 	 */
 	protected $merge_var_name = '';
 	protected $merge_fields = array();
@@ -82,7 +82,7 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 
 		if ( $this->is_gravityforms_supported() ) {
 
-			// Load the MailChimp API library.
+			// Load the Coda.io API library.
 			if ( ! class_exists( 'CodaPHP' ) ) {
 				require_once ('vendor/autoload.php');
 			}
@@ -158,7 +158,7 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 			array(
 				'description' => '<p>' .
 					sprintf(
-						esc_html__( 'MailChimp makes it easy to send email newsletters to your customers, manage your subscriber lists, and track campaign performance. Use Gravity Forms to collect customer information and automatically add it to your MailChimp subscriber list. If you don\'t have a MailChimp account, you can %1$ssign up for one here.%2$s', 'gravityforms-coda' ),
+						esc_html__( 'Coda.io is a new type of powerful document. Use Gravity Forms to collect any form entry information and automatically add it to your Coda.io document table. If you don\'t have a Coda.io account, you can %1$ssign up for one here.%2$s', 'gravityforms-coda' ),
 						'<a href="http://www.coda.io/" target="_blank">', '</a>'
 					)
 					. '</p>',
@@ -274,7 +274,7 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 	}
 
 	/**
-	 * Return an array of MailChimp list fields which can be mapped to the Form fields/entry meta.
+	 * Return an array of Coda.io document table fields which can be mapped to the Form fields/entry meta.
 	 *
 	 * @since  3.0
 	 * @access public
@@ -617,7 +617,6 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 			return null;
 		}
 
-		// $coda = new GF_MailChimp_API( $api_key );
 		$coda = new CodaPHP\CodaPHP($api_key);
 
 		try {
