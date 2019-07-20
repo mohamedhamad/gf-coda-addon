@@ -552,14 +552,7 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 		}
 
 		try {
-
-			?>
-			<pre><?php var_dump($row); ?></pre>
-			<?php
 			$result = $this->api->insertRows($doc, $table, $row); // Insert/updates a row in a table
-			?>
-			<pre><?php var_dump($result); ?></pre>
-			<?php
 		} catch ( Exception $e ) {
 
 			// Log that contact lists could not be obtained.

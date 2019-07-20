@@ -1,5 +1,4 @@
 
-/vendor
 /package-lock.json
 /composer.lock
 /dist
