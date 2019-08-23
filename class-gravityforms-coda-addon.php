@@ -99,8 +99,8 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 	public function init()
 	{
 		parent::init();
-        // add_action( 'gform_pre_submission',   array($this, 'gform_pre_submission'));
-		// add_filter( 'gform_confirmation',     array($this, 'gform_confirmation') , 10, 4 );
+        add_action( 'gform_pre_submission',   array($this, 'gform_pre_submission'));
+		add_filter( 'gform_confirmation',     array($this, 'gform_confirmation') , 10, 4 );
     }
 
 
@@ -578,15 +578,15 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
     /***********************************************/
 	/************ Gravity Forms Hooks **************/
 	/***********************************************/
-	// public function gform_pre_submission($form)
-	// {
+	public function gform_pre_submission($form)
+	{
+		return $form;
+    }
 
-    // }
-
-    // public function gform_confirmation( $confirmation, $form, $entry, $ajax )
-	// {
-
-    // }
+    public function gform_confirmation( $confirmation, $form, $entry, $ajax )
+	{
+		return $confirmation;
+    }
 
     // # ADMIN FUNCTIONS -----------------------------------------------------------------------------------------------
 
