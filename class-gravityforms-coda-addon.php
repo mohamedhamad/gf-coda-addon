@@ -16,7 +16,8 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 	
 	private static $_instance = null;
 	public $api = null;
-	
+	public $_async_feed_processing = true;
+
 	/**
 	 * Defines the capabilities needed for the Coda.io Add-On
 	 *
@@ -97,9 +98,9 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 	 */
 	public function init()
 	{
-        parent::init();
-        add_action( 'gform_pre_submission',   array($this, 'gform_pre_submission'));
-		add_filter( 'gform_confirmation',     array($this, 'gform_confirmation') , 10, 4 );
+		parent::init();
+        // add_action( 'gform_pre_submission',   array($this, 'gform_pre_submission'));
+		// add_filter( 'gform_confirmation',     array($this, 'gform_confirmation') , 10, 4 );
     }
 
 
@@ -109,7 +110,8 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 	 * @since  4.0
 	 * @access public
 	 */
-	public function uninstall() {
+	public function uninstall() 
+	{
 
 		parent::uninstall();
 
@@ -127,7 +129,8 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 	 *
 	 * @return array
 	 */
-	public function styles() {
+	public function styles() 
+	{
 
 		$styles = array(
 			array(
@@ -153,7 +156,8 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 	 *
 	 * @return array
 	 */
-	public function plugin_settings_fields() {
+	public function plugin_settings_fields() 
+	{
 		return array(
 			array(
 				'description' => '<p>' .
@@ -186,7 +190,8 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 	 *
 	 * @return array
 	 */
-	public function feed_settings_fields() {
+	public function feed_settings_fields() 
+	{
 
 		$settings = array(
 			array(
@@ -281,7 +286,8 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 	 *
 	 * @return array
 	 */
-	public function merge_vars_field_map() {
+	public function merge_vars_field_map() 
+	{
 		// Initialize field map array.
 		$field_map = array();
 		$doc = $this->get_setting( 'codaDoc' );
@@ -359,7 +365,8 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 	 *
 	 * @return string
 	 */
-	public function settings_coda_doc( $field, $echo = true ) {
+	public function settings_coda_doc( $field, $echo = true ) 
+	{
 
 		// Initialize HTML string.
 		$html = '';
@@ -434,7 +441,8 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 
 	}
 
-	public function settings_coda_doc_tables( $field, $echo = true ){
+	public function settings_coda_doc_tables( $field, $echo = true )
+	{
 		// Initialize HTML string.
 		$html = '';
 		$doc_id = $this->get_setting( 'codaDoc' );
@@ -524,8 +532,8 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 	 */
 	public function process_feed( $feed, $entry, $form )
 	{
-		$doc = $feed['meta']['codaDoc'];
-		$table = $feed['meta']['codaTable'];
+		$doc 	= $feed['meta']['codaDoc'];
+		$table 	= $feed['meta']['codaTable'];
 
 		// Log that we are processing feed.
 		$this->log_debug( __METHOD__ . '(): Processing feed.' );
@@ -554,7 +562,6 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
 		try {
 			$result = $this->api->insertRows($doc, $table, $row); // Insert/updates a row in a table
 		} catch ( Exception $e ) {
-
 			// Log that contact lists could not be obtained.
 			$this->log_error( __METHOD__ . '(): Could not insert entry in to Coda Doc Table; ' . $e->getMessage() );
 
@@ -571,15 +578,15 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
     /***********************************************/
 	/************ Gravity Forms Hooks **************/
 	/***********************************************/
-	public function gform_pre_submission($form)
-	{
+	// public function gform_pre_submission($form)
+	// {
 
-    }
+    // }
 
-    public function gform_confirmation( $confirmation, $form, $entry, $ajax )
-	{
+    // public function gform_confirmation( $confirmation, $form, $entry, $ajax )
+	// {
 
-    }
+    // }
 
     // # ADMIN FUNCTIONS -----------------------------------------------------------------------------------------------
 
@@ -594,7 +601,8 @@ class GravityFormsCodaFeedAddOn extends GFFeedAddOn
     
 	
 
-	public function initialize_api( $api_key = null ) {
+	public function initialize_api( $api_key = null ) 
+	{
 		// If API is already initialized, return true.
 		if ( ! is_null( $this->api ) ) {
 			return true;
