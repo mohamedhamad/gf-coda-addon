@@ -8,7 +8,7 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "danielstieber/coda-php": "^0.0.3"
+        "danielstieber/coda-php": "^0.1.0"
     },
     "require-dev": {
         

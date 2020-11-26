@@ -1,32 +1,93 @@
 [
     {
-        "name": "ralouphie/getallheaders",
-        "version": "2.0.5",
-        "version_normalized": "2.0.5.0",
+        "name": "danielstieber/coda-php",
+        "version": "0.1.0",
+        "version_normalized": "0.1.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/ralouphie/getallheaders.git",
-            "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa"
+            "url": "https://github.com/danielstieber/CodaPHP.git",
+            "reference": "dab365e0a452d2d08c7dc5547786861ee3b985de"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
-            "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
+            "url": "https://api.github.com/repos/danielstieber/CodaPHP/zipball/dab365e0a452d2d08c7dc5547786861ee3b985de",
+            "reference": "dab365e0a452d2d08c7dc5547786861ee3b985de",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.3"
+            "guzzlehttp/guzzle": "~6.0",
+            "php": ">=7.0.0"
         },
-        "require-dev": {
-            "phpunit/phpunit": "~3.7.0",
-            "satooshi/php-coveralls": ">=1.0"
-        },
-        "time": "2016-02-11T07:05:27+00:00",
+        "time": "2020-08-15T12:12:35+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
+            "psr-0": {
+                "CodaPHP": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Daniel Stieber",
+                "email": "daniel.w.stieber@gmail.com",
+                "homepage": "http://www.danielstieber.com"
+            }
+        ],
+        "description": "CodaPHP is a library that makes it easy to use Coda API in web projects.",
+        "keywords": [
+            "api",
+            "coda",
+            "library"
+        ]
+    },
+    {
+        "name": "guzzlehttp/guzzle",
+        "version": "6.5.5",
+        "version_normalized": "6.5.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/guzzle.git",
+            "reference": "9d4290de1cfd701f38099ef7e183b64b4b7b0c5e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/9d4290de1cfd701f38099ef7e183b64b4b7b0c5e",
+            "reference": "9d4290de1cfd701f38099ef7e183b64b4b7b0c5e",
+            "shasum": ""
+        },
+        "require": {
+            "ext-json": "*",
+            "guzzlehttp/promises": "^1.0",
+            "guzzlehttp/psr7": "^1.6.1",
+            "php": ">=5.5",
+            "symfony/polyfill-intl-idn": "^1.17.0"
+        },
+        "require-dev": {
+            "ext-curl": "*",
+            "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
+            "psr/log": "^1.1"
+        },
+        "suggest": {
+            "psr/log": "Required for using the Log middleware"
+        },
+        "time": "2020-06-16T21:01:06+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "6.5-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GuzzleHttp\\": "src/"
+            },
             "files": [
-                "src/getallheaders.php"
+                "src/functions_include.php"
             ]
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -35,11 +96,148 @@
         ],
         "authors": [
             {
-                "name": "Ralph Khattar",
-                "email": "ralph.khattar@gmail.com"
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
             }
         ],
-        "description": "A polyfill for getallheaders."
+        "description": "Guzzle is a PHP HTTP client library",
+        "homepage": "http://guzzlephp.org/",
+        "keywords": [
+            "client",
+            "curl",
+            "framework",
+            "http",
+            "http client",
+            "rest",
+            "web service"
+        ]
+    },
+    {
+        "name": "guzzlehttp/promises",
+        "version": "1.4.0",
+        "version_normalized": "1.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/promises.git",
+            "reference": "60d379c243457e073cff02bc323a2a86cb355631"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/promises/zipball/60d379c243457e073cff02bc323a2a86cb355631",
+            "reference": "60d379c243457e073cff02bc323a2a86cb355631",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5"
+        },
+        "require-dev": {
+            "symfony/phpunit-bridge": "^4.4 || ^5.1"
+        },
+        "time": "2020-09-30T07:37:28+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.4-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GuzzleHttp\\Promise\\": "src/"
+            },
+            "files": [
+                "src/functions_include.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            }
+        ],
+        "description": "Guzzle promises library",
+        "keywords": [
+            "promise"
+        ]
+    },
+    {
+        "name": "guzzlehttp/psr7",
+        "version": "1.7.0",
+        "version_normalized": "1.7.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/psr7.git",
+            "reference": "53330f47520498c0ae1f61f7e2c90f55690c06a3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/psr7/zipball/53330f47520498c0ae1f61f7e2c90f55690c06a3",
+            "reference": "53330f47520498c0ae1f61f7e2c90f55690c06a3",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0",
+            "psr/http-message": "~1.0",
+            "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
+        },
+        "provide": {
+            "psr/http-message-implementation": "1.0"
+        },
+        "require-dev": {
+            "ext-zlib": "*",
+            "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20 || ^8.5.8 || ^9.3.10"
+        },
+        "suggest": {
+            "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
+        },
+        "time": "2020-09-30T07:37:11+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.7-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GuzzleHttp\\Psr7\\": "src/"
+            },
+            "files": [
+                "src/functions_include.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            },
+            {
+                "name": "Tobias Schultze",
+                "homepage": "https://github.com/Tobion"
+            }
+        ],
+        "description": "PSR-7 message implementation that also provides common utility methods",
+        "keywords": [
+            "http",
+            "message",
+            "psr-7",
+            "request",
+            "response",
+            "stream",
+            "uri",
+            "url"
+        ]
     },
     {
         "name": "psr/http-message",
@@ -94,45 +292,33 @@
         ]
     },
     {
-        "name": "guzzlehttp/psr7",
-        "version": "1.5.2",
-        "version_normalized": "1.5.2.0",
+        "name": "ralouphie/getallheaders",
+        "version": "3.0.3",
+        "version_normalized": "3.0.3.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/guzzle/psr7.git",
-            "reference": "9f83dded91781a01c63574e387eaa769be769115"
+            "url": "https://github.com/ralouphie/getallheaders.git",
+            "reference": "120b605dfeb996808c31b6477290a714d356e822"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/psr7/zipball/9f83dded91781a01c63574e387eaa769be769115",
-            "reference": "9f83dded91781a01c63574e387eaa769be769115",
+            "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+            "reference": "120b605dfeb996808c31b6477290a714d356e822",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.4.0",
-            "psr/http-message": "~1.0",
-            "ralouphie/getallheaders": "^2.0.5"
-        },
-        "provide": {
-            "psr/http-message-implementation": "1.0"
+            "php": ">=5.6"
         },
         "require-dev": {
-            "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+            "php-coveralls/php-coveralls": "^2.1",
+            "phpunit/phpunit": "^5 || ^6.5"
         },
-        "time": "2018-12-04T20:46:45+00:00",
+        "time": "2019-03-08T08:55:37+00:00",
         "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.5-dev"
-            }
-        },
         "installation-source": "dist",
         "autoload": {
-            "psr-4": {
-                "GuzzleHttp\\Psr7\\": "src/"
-            },
             "files": [
-                "src/functions_include.php"
+                "src/getallheaders.php"
             ]
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -141,123 +327,54 @@
         ],
         "authors": [
             {
-                "name": "Michael Dowling",
-                "email": "mtdowling@gmail.com",
-                "homepage": "https://github.com/mtdowling"
-            },
-            {
-                "name": "Tobias Schultze",
-                "homepage": "https://github.com/Tobion"
+                "name": "Ralph Khattar",
+                "email": "ralph.khattar@gmail.com"
             }
         ],
-        "description": "PSR-7 message implementation that also provides common utility methods",
-        "keywords": [
-            "http",
-            "message",
-            "psr-7",
-            "request",
-            "response",
-            "stream",
-            "uri",
-            "url"
-        ]
+        "description": "A polyfill for getallheaders."
     },
     {
-        "name": "guzzlehttp/promises",
-        "version": "v1.3.1",
-        "version_normalized": "1.3.1.0",
+        "name": "symfony/polyfill-intl-idn",
+        "version": "v1.20.0",
+        "version_normalized": "1.20.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/guzzle/promises.git",
-            "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646"
+            "url": "https://github.com/symfony/polyfill-intl-idn.git",
+            "reference": "3b75acd829741c768bc8b1f84eb33265e7cc5117"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
-            "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+            "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/3b75acd829741c768bc8b1f84eb33265e7cc5117",
+            "reference": "3b75acd829741c768bc8b1f84eb33265e7cc5117",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.5.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "^4.0"
-        },
-        "time": "2016-12-20T10:07:11+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.4-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "GuzzleHttp\\Promise\\": "src/"
-            },
-            "files": [
-                "src/functions_include.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Michael Dowling",
-                "email": "mtdowling@gmail.com",
-                "homepage": "https://github.com/mtdowling"
-            }
-        ],
-        "description": "Guzzle promises library",
-        "keywords": [
-            "promise"
-        ]
-    },
-    {
-        "name": "guzzlehttp/guzzle",
-        "version": "6.3.3",
-        "version_normalized": "6.3.3.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/guzzle/guzzle.git",
-            "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/407b0cb880ace85c9b63c5f9551db498cb2d50ba",
-            "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba",
-            "shasum": ""
-        },
-        "require": {
-            "guzzlehttp/promises": "^1.0",
-            "guzzlehttp/psr7": "^1.4",
-            "php": ">=5.5"
-        },
-        "require-dev": {
-            "ext-curl": "*",
-            "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
-            "psr/log": "^1.0"
+            "php": ">=7.1",
+            "symfony/polyfill-intl-normalizer": "^1.10",
+            "symfony/polyfill-php72": "^1.10"
         },
         "suggest": {
-            "psr/log": "Required for using the Log middleware"
+            "ext-intl": "For best performance"
         },
-        "time": "2018-04-22T15:46:56+00:00",
+        "time": "2020-10-23T14:02:19+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "6.3-dev"
+                "dev-main": "1.20-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
             }
         },
         "installation-source": "dist",
         "autoload": {
-            "files": [
-                "src/functions_include.php"
-            ],
             "psr-4": {
-                "GuzzleHttp\\": "src/"
-            }
+                "Symfony\\Polyfill\\Intl\\Idn\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ]
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -265,49 +382,86 @@
         ],
         "authors": [
             {
-                "name": "Michael Dowling",
-                "email": "mtdowling@gmail.com",
-                "homepage": "https://github.com/mtdowling"
+                "name": "Laurent Bassin",
+                "email": "laurent@bassin.info"
+            },
+            {
+                "name": "Trevor Rowbotham",
+                "email": "trevor.rowbotham@pm.me"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
             }
         ],
-        "description": "Guzzle is a PHP HTTP client library",
-        "homepage": "http://guzzlephp.org/",
+        "description": "Symfony polyfill for intl's idn_to_ascii and idn_to_utf8 functions",
+        "homepage": "https://symfony.com",
         "keywords": [
-            "client",
-            "curl",
-            "framework",
-            "http",
-            "http client",
-            "rest",
-            "web service"
+            "compatibility",
+            "idn",
+            "intl",
+            "polyfill",
+            "portable",
+            "shim"
+        ],
+        "funding": [
+            {
+                "url": "https://symfony.com/sponsor",
+                "type": "custom"
+            },
+            {
+                "url": "https://github.com/fabpot",
+                "type": "github"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                "type": "tidelift"
+            }
         ]
     },
     {
-        "name": "danielstieber/coda-php",
-        "version": "0.0.3",
-        "version_normalized": "0.0.3.0",
+        "name": "symfony/polyfill-intl-normalizer",
+        "version": "v1.20.0",
+        "version_normalized": "1.20.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/danielstieber/CodaPHP.git",
-            "reference": "3bb04f59afda8ae19ad6a29345fbdc9a03fe37a6"
+            "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
+            "reference": "727d1096295d807c309fb01a851577302394c897"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/danielstieber/CodaPHP/zipball/3bb04f59afda8ae19ad6a29345fbdc9a03fe37a6",
-            "reference": "3bb04f59afda8ae19ad6a29345fbdc9a03fe37a6",
+            "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/727d1096295d807c309fb01a851577302394c897",
+            "reference": "727d1096295d807c309fb01a851577302394c897",
             "shasum": ""
         },
         "require": {
-            "guzzlehttp/guzzle": "~6.0",
-            "php": ">=7.0.0"
+            "php": ">=7.1"
         },
-        "time": "2019-03-19T16:02:08+00:00",
+        "suggest": {
+            "ext-intl": "For best performance"
+        },
+        "time": "2020-10-23T14:02:19+00:00",
         "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-main": "1.20-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
+            }
+        },
         "installation-source": "dist",
         "autoload": {
-            "psr-0": {
-                "CodaPHP": "src/"
-            }
+            "psr-4": {
+                "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ],
+            "classmap": [
+                "Resources/stubs"
+            ]
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -315,16 +469,112 @@
         ],
         "authors": [
             {
-                "name": "Daniel Stieber",
-                "email": "daniel.w.stieber@gmail.com",
-                "homepage": "http://www.danielstieber.com"
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
             }
         ],
-        "description": "CodaPHP is a library that makes it easy to use Coda API in web projects.",
+        "description": "Symfony polyfill for intl's Normalizer class and related functions",
+        "homepage": "https://symfony.com",
         "keywords": [
-            "api",
-            "coda",
-            "library"
+            "compatibility",
+            "intl",
+            "normalizer",
+            "polyfill",
+            "portable",
+            "shim"
+        ],
+        "funding": [
+            {
+                "url": "https://symfony.com/sponsor",
+                "type": "custom"
+            },
+            {
+                "url": "https://github.com/fabpot",
+                "type": "github"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                "type": "tidelift"
+            }
+        ]
+    },
+    {
+        "name": "symfony/polyfill-php72",
+        "version": "v1.20.0",
+        "version_normalized": "1.20.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-php72.git",
+            "reference": "cede45fcdfabdd6043b3592e83678e42ec69e930"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/cede45fcdfabdd6043b3592e83678e42ec69e930",
+            "reference": "cede45fcdfabdd6043b3592e83678e42ec69e930",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1"
+        },
+        "time": "2020-10-23T14:02:19+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-main": "1.20-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Php72\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "polyfill",
+            "portable",
+            "shim"
+        ],
+        "funding": [
+            {
+                "url": "https://symfony.com/sponsor",
+                "type": "custom"
+            },
+            {
+                "url": "https://github.com/fabpot",
+                "type": "github"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                "type": "tidelift"
+            }
         ]
     }
 ]

@@ -3,7 +3,7 @@
 Plugin Name: GravityForms Coda Addon
 Plugin URI: http://www.mohamed-hamad.com
 Description: A Gravity Forms Feed Addon for Coda
-Version: 1.0
+Version: 1.1
 Author: Mohamed Hamad
 Author URI: http://www.mohamed-hamad.com
 License:     GPL-2.0+
@@ -26,7 +26,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 
 @package   GravityForms_Coda
-@version   1.0.0
+@version   1.0.1
 @author    Mohamed Hamad <mohamed@mohamed-hamad.com>
 @license   GPL-2.0+
 @link      https://www.mohamed-hamad.com
@@ -41,7 +41,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 require 'vendor/autoload.php';
 
-define( 'GF_CODA_VERSION', '1.0' );
+define( 'GF_CODA_VERSION', '1.1' );
 define( 'GF_CODA_FILE', __FILE__ );
 define( 'GF_CODA_PATH', plugin_dir_path( __FILE__ ) );
 define( 'GF_CODA_URL', plugin_dir_url( __FILE__ ) );

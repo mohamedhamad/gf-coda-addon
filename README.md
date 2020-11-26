@@ -16,4 +16,4 @@
 5. click "Update Settings". If API key is verifified, a green checkmark will appear
 
 # Changelog
-## v0.0.1 1st Commit
+## v0.0.2 Updated version 1.0 of Coda.io API
